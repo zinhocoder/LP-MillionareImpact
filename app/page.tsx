@@ -323,17 +323,16 @@ const redirectToWhatsApp = (e: React.MouseEvent) => {
           )}
 
           {/* Vídeo liberado com autoplay */}
-          {formSubmitted && (
-            <video
-              src="/videos/aulagratuitapreview.mp4"
-              className="absolute inset-0 w-full h-full"
-              autoPlay
-              controls
-              muted
-              playsInline
-              preload="metadata"
-            />
-          )}
+{formSubmitted && (
+  <iframe
+    src="https://www.youtube.com/embed/FKfr5RWmf0I?autoplay=1&mute=1&rel=0&playsinline=1"
+    className="absolute inset-0 w-full h-full"
+    allow="autoplay; encrypted-media"
+    allowFullScreen
+    title="Vídeo YouTube"
+  />
+)}
+
         </div>
 
         {/* Formulário visível até liberação */}
