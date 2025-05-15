@@ -472,13 +472,13 @@ const redirectToWhatsApp = (e: React.MouseEvent) => {
       <div className="bg-gradient-to-br from-zinc-900 to-black rounded-xl overflow-hidden shadow-xl border border-zinc-800 group hover:border-amber-500/30 transition-all duration-300">
         <div className="relative">
           <video
-            src="/videos/depoimento2.mp4"
+            src="/videos/"
             className="w-full h-full object-contain"
             controls
             preload="metadata"
           ></video>
           <div className="absolute bottom-0 left-0 right-0 p-6 z-30 bg-gradient-to-t from-black/80 to-transparent">
-            <p className="text-sm text-amber-400 mt-2">Francieli - Lunária BR</p>
+            <p className="text-sm text-amber-400 mt-2">?</p>
           </div>
         </div>
       </div>
