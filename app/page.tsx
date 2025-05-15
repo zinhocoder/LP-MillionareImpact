@@ -325,7 +325,7 @@ const redirectToWhatsApp = (e: React.MouseEvent) => {
           {/* Vídeo liberado com autoplay */}
           {formSubmitted && (
             <video
-              src="/videos/aulagratuita.mp4"
+              src="/videos/aulagratuitapreview.mp4"
               className="absolute inset-0 w-full h-full"
               autoPlay
               controls
@@ -1177,7 +1177,7 @@ const redirectToWhatsApp = (e: React.MouseEvent) => {
                 <div className="relative group inline-block">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-400 to-amber-600 rounded opacity-70 group-hover:opacity-100 blur-sm transition duration-300"></div>
                   <Link
-                    href="https://pay.kiwify.com.br/JjHXaRE"
+                    href="https://pay.kiwify.com.br/hBKhcMI"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="relative bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold py-4 px-8 rounded inline-flex items-center transition-all duration-300 shadow-lg"
