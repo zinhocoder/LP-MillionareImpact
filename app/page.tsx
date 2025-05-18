@@ -363,7 +363,7 @@ export default function Home() {
                       typebot="meu-typebot-dob9pd3"
                       apiHost="https://typebot.io"
                       style={{ width: "100%", height: "600px" }}
-                      onCompleted={handleTypebotComplete}
+                      onEnd={handleTypebotComplete}
                     />
                   </div>
                 </div>
