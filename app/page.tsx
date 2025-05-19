@@ -175,6 +175,106 @@ export default function Home() {
         </div>
       </div>
 
+       {/* VSL Section - New with Typebot */}
+      <section id="aula-gratuita" className="py-20 bg-black relative">
+        {/* Efeito dourado adicional */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-amber-500/5 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-bl from-amber-500/5 to-transparent"></div>
+        </div>
+        {/* Efeito dourado - Círculos radiais */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/5 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold py-5 px-12 rounded-full shadow-lg mb-6">
+              EXCLUSIVO
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-amber-500">Aula Gratuita:</span>{" "}
+              <span>Como alavancar seus lucros em até 30 dias</span>
+            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-amber-500">com o Método Impacto Milionário</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Para empresários que estão cansados de tentar de tudo e não ver lucro:
+            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              conheça o método que transforma operação confusa em estrutura <strong>lucrativa e escalável.</strong>
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-b from-zinc-900 to-black rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
+              {/* Vídeo responsivo */}
+              <div className="relative w-full pt-[56.25%] bg-zinc-800 rounded-t-xl overflow-hidden">
+                {/* Overlay bloqueado */}
+                {!formSubmitted && (
+                  <>
+                    <div className="absolute inset-0 z-30 bg-black bg-opacity-80 backdrop-blur-xl flex flex-col items-center justify-center p-6">
+                      <Lock className="h-16 w-16 text-amber-500 mb-6" />
+                      <h3 className="text-2xl font-bold mb-4 text-center">Esta aula exclusiva está bloqueada</h3>
+                      <p className="text-gray-300 text-center mb-6 max-w-md">
+                        Preencha o formulário abaixo para ter acesso imediato a esta aula gratuita que vai transformar
+                        seu time de vendas
+                      </p>
+                      <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
+                        <Play className="h-8 w-8 text-black fill-current" />
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Vídeo liberado com autoplay */}
+                {formSubmitted && (
+                  <iframe
+                    src="https://www.youtube.com/embed/FKfr5RWmf0I?autoplay=1&mute=1&rel=0&playsinline=1"
+                    className="absolute inset-0 w-full h-full"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title="Vídeo YouTube"
+                  />
+                )}
+              </div>
+
+              {/* Typebot Form */}
+              {!formSubmitted && (
+                <div className="p-8 bg-gradient-to-b from-zinc-900/50 to-black">
+                  <h3 className="text-xl font-bold mb-6 text-center">
+                    Preencha seus dados para <span className="text-amber-500">liberar o acesso</span>
+                  </h3>
+
+                  <div className="max-w-2xl mx-auto">
+                    <Standard
+                      typebot="meu-typebot-dob9pd3"
+                      apiHost="https://typebot.io"
+                      style={{ width: "100%", height: "600px" }}
+                      onEnd={handleTypebotComplete}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Thank you message after form submission */}
+              {formSubmitted && (
+                <div className="p-8 bg-gradient-to-b from-zinc-900/50 to-black text-center">
+                  <h3 className="text-xl font-bold mb-4 text-amber-500">Acesso liberado com sucesso!</h3>
+                  <p className="text-gray-300 mb-6">
+                    Aproveite a aula e não se esqueça de aplicar os conhecimentos no seu negócio.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* For Who Section */}
       <section className="py-16 bg-zinc-950 relative">
         {/* Efeito dourado - Padrão de linhas diagonais */}
@@ -278,106 +378,6 @@ export default function Home() {
                 QUERO AGENDAR
                 <ChevronRight className="ml-3 h-6 w-6 sm:h-7 sm:w-7" />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* VSL Section - New with Typebot */}
-      <section id="aula-gratuita" className="py-20 bg-black relative">
-        {/* Efeito dourado adicional */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-amber-500/5 to-transparent"></div>
-          <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-bl from-amber-500/5 to-transparent"></div>
-        </div>
-        {/* Efeito dourado - Círculos radiais */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/5 rounded-full blur-2xl"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold py-5 px-12 rounded-full shadow-lg mb-6">
-              EXCLUSIVO
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-amber-500">Aula Gratuita:</span>{" "}
-              <span>Como alavancar seus lucros em até 30 dias</span>
-            </h2>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-amber-500">com o Método Impacto Milionário</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Para empresários que estão cansados de tentar de tudo e não ver lucro:
-            </p>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              conheça o método que transforma operação confusa em estrutura <strong>lucrativa e escalável.</strong>
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-b from-zinc-900 to-black rounded-xl overflow-hidden shadow-2xl border border-zinc-800">
-              {/* Vídeo responsivo */}
-              <div className="relative w-full pt-[56.25%] bg-zinc-800 rounded-t-xl overflow-hidden">
-                {/* Overlay bloqueado */}
-                {!formSubmitted && (
-                  <>
-                    <div className="absolute inset-0 z-30 bg-black bg-opacity-80 backdrop-blur-xl flex flex-col items-center justify-center p-6">
-                      <Lock className="h-16 w-16 text-amber-500 mb-6" />
-                      <h3 className="text-2xl font-bold mb-4 text-center">Esta aula exclusiva está bloqueada</h3>
-                      <p className="text-gray-300 text-center mb-6 max-w-md">
-                        Preencha o formulário abaixo para ter acesso imediato a esta aula gratuita que vai transformar
-                        seu time de vendas
-                      </p>
-                      <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                        <Play className="h-8 w-8 text-black fill-current" />
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {/* Vídeo liberado com autoplay */}
-                {formSubmitted && (
-                  <iframe
-                    src="https://www.youtube.com/embed/FKfr5RWmf0I?autoplay=1&mute=1&rel=0&playsinline=1"
-                    className="absolute inset-0 w-full h-full"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    title="Vídeo YouTube"
-                  />
-                )}
-              </div>
-
-              {/* Typebot Form */}
-              {!formSubmitted && (
-                <div className="p-8 bg-gradient-to-b from-zinc-900/50 to-black">
-                  <h3 className="text-xl font-bold mb-6 text-center">
-                    Preencha seus dados para <span className="text-amber-500">liberar o acesso</span>
-                  </h3>
-
-                  <div className="max-w-2xl mx-auto">
-                    <Standard
-                      typebot="meu-typebot-dob9pd3"
-                      apiHost="https://typebot.io"
-                      style={{ width: "100%", height: "600px" }}
-                      onEnd={handleTypebotComplete}
-                    />
-                  </div>
-                </div>
-              )}
-
-              {/* Thank you message after form submission */}
-              {formSubmitted && (
-                <div className="p-8 bg-gradient-to-b from-zinc-900/50 to-black text-center">
-                  <h3 className="text-xl font-bold mb-4 text-amber-500">Acesso liberado com sucesso!</h3>
-                  <p className="text-gray-300 mb-6">
-                    Aproveite a aula e não se esqueça de aplicar os conhecimentos no seu negócio.
-                  </p>
-                </div>
-              )}
             </div>
           </div>
         </div>
